@@ -67,7 +67,7 @@ public class Response<T> implements Serializable {
         return new Response<>(true, ResponseCode.SUCCESS_200, object);
     }
 
-    public static <T> Response<T> getFailed(ResponseCode responseCode, T object) {
-        return new Response<>(false, responseCode, object);
+    public static <T> Response<T> getFailed(ResponseCode responseCode) {
+        return new Response<>(false, responseCode, null);
     }
 }
